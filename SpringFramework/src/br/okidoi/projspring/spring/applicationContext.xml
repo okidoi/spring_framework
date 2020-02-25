@@ -11,6 +11,59 @@
 
    <bean id="beanPessoa" class = "br.okidoi.projspring.beans.BeanPessoa">
       <property name = "nome" value = "Marcio Okidoi"/>
+      <property name = "fone" value = "5199258-7899"/>
+      <property name = "cpf" value = "94879087477"/>
+      <property name = "idade" value = "40"/>
+      <property name = "sexo" value = "M"/>
+      <property name = "listaIrmaos">
+      	<list>
+      		<value>Pedro</value>
+      		<value>Paulo</value>
+      		<value>Henrique</value>
+      		<value>Lorenzo</value>
+      	</list>
+      </property>
+      
+      <property name="videosQtd">
+      	<map>
+      		<entry key="Java" 		value="288" />
+      		<entry key="PHP" 		value="212" />
+      		<entry key="Bootstrap" 	value="513" />
+      		<entry key="SpringBoot" value="433" />
+      		<entry key="Angular" 	value="241" />
+      	</map>
+      </property>
+      
+      <property name="listaFilhos">
+      	<set>
+	      	<value>João</value>
+	      	<value>Lucas</value>
+	      	<value>Marcos</value>
+		</set>
+      </property>
+      
+      <property name = "propertiesConexao">
+      	<props>
+      		<prop key="driver">org.postgresql.class</prop>
+      		<prop key="url">url do banco de dados</prop>
+      		<prop key="usuario">root</prop>
+      		<prop key="senha">root</prop>
+      	</props>
+      
+      </property>
+
+	  <property name="endereco" ref="beanEndereco" />
+      
+   </bean>
+   
+   <bean id="beanEndereco" class="br.okidoi.projspring.beans.BeanEndereco">
+   	<constructor-arg name="logradouro" value = "Rua Nilo Peçanha"/>
+   	<constructor-arg name="numero" value = "1500" />
+   	<constructor-arg name="bairro" value = "Mont'Serrat" />
+   	<constructor-arg name="cidade" value = "Porto Alegre" />
+   	<constructor-arg name="UF" value = "RS"/>
+   	<constructor-arg name="CEP" value = "90560-074" />
+   	
    </bean>
 
    <bean id="beanAluno" class = "br.okidoi.projspring.beans.Aluno">
