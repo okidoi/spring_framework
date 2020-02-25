@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans 
+	xmlns = "http://www.springframework.org/schema/beans"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   
+
+   <bean id="beanPessoa" class = "br.okidoi.projspring.beans.BeanPessoa">
+      <property name = "nome" value = "Marcio Okidoi"/>
+   </bean>
+
+   <bean id="beanAluno" class = "br.okidoi.projspring.beans.Aluno">
+   </bean>
+
+   <bean id="beanProfessor" class = "br.okidoi.projspring.beans.Professor">
+   </bean>
+   
+   <bean id="beanQuadroNegro" class = "br.okidoi.projspring.beans.QuadroNegro">
+   </bean>
+    
+   <bean id="beanUniversidade" class = "br.okidoi.projspring.beans.Universidade">
+      <property name = "aluno"  		ref="beanAluno" />
+      <property name = "professor"  	ref="beanProfessor" />
+      <property name = "quadroNegro"	ref="beanQuadroNegro" />
+   </bean>
+           
+         
+
+</beans>
